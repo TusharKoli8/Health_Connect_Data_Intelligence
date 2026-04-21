@@ -2,9 +2,9 @@
 
 ##  Project Overview
 
-HealthConnect Data Intelligence is an end-to-end SQL-based data engineering project designed to process healthcare data from multiple CSV source files into a structured data warehouse.
+HealthConnect Data Intelligence is an end to end SQL based data engineering project designed to process healthcare data from multiple CSV source files into a structured data warehouse.
 
-The project implements a **3-layer architecture (RAW → CLEANSED → REFINED)** and enables analytics through KPI-driven reporting.
+The project implements a 3 layer architecture (RAW - CLEANSED - REFINED) and enables analytics through KPI driven reporting.
 
 Database Structure
 
@@ -22,13 +22,13 @@ Database Structure
 
 
 ##  Data Sources
-Processes core healthcare domains: **Patients, Providers, Payers, Encounters, Claims, Diagnoses, Procedures, and Medications.**
+Processes core healthcare domains: *Patients, Providers, Payers, Encounters, Claims, Diagnoses, Procedures, and Medications.*
 
 
 ##  ETL Pipeline
-1. **Source → RAW:** Automated bulk ingestion.
-2. **RAW → CLEANSED:** Multi-step cleaning and standardization scripts.
-3. **CLEANSED → REFINED:** Advanced `MERGE` logic for upserts and SCD.
+1. **Source - RAW:** Automated bulk ingestion.
+2. **RAW - CLEANSED:** Multi-step cleaning and standardization scripts.
+3. **CLEANSED - REFINED:** Advanced `MERGE` logic for upserts and SCD.
 4. **Master Pipeline:** Single-point execution via `Proc_HealthConnect_Master_Pipeline`.
 
 
@@ -46,8 +46,5 @@ Processes core healthcare domains: **Patients, Providers, Payers, Encounters, Cl
 
 
 ##  How to Run
-1. Create environment databases: `raw`, `cleansed`, and `refined`.
-2. Execute DDL scripts to initialize tables.
-3. Trigger the end-to-end workflow:
-   sql
+
    EXEC Proc_HealthConnect_Master_Pipeline;
